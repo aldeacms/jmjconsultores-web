@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - JMJ Consultores</title>
+    <link rel="stylesheet" href="style-home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jmj: { blue: '#181464', orange: '#F15A24' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="antialiased bg-slate-50">
+
+    <header
+        class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="relative z-50">
+                <img src="branding/optimizadas/logo-jmj-consultores-01.svg" alt="JMJ Consultores"
+                    class="h-12 md:h-14 object-contain"
+                    onerror="this.src='https://placehold.co/200x50/181464/FFF?text=JMJ'">
+            </a>
+
+            <nav class="hidden md:flex gap-10 text-[13px] font-bold text-jmj-blue tracking-widest uppercase">
+                <a href="#" class="hover:text-jmj-orange transition-colors">Inicio</a>
+                <a href="#" class="hover:text-jmj-orange transition-colors">Quiénes Somos</a>
+                <a href="#" class="text-jmj-orange transition-colors">Servicios</a>
+                <a href="#contacto" class="hover:text-jmj-orange transition-colors">Contacto</a>
+            </nav>
+            <a href="#contacto"
+                class="hidden lg:inline-block bg-jmj-orange text-white px-7 py-3 rounded text-[13px] font-bold uppercase tracking-wider hover:bg-[#d14b1c] transition-colors shadow-lg hover:shadow-jmj-orange/30">
+                Evaluar Proyecto
+            </a>
+
+            <button id="menu-btn"
+                class="md:hidden relative z-50 text-jmj-blue focus:outline-none w-8 h-8 flex flex-col justify-center items-center gap-1.5">
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar1"></span>
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar2"></span>
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar3"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-jmj-blue/98 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-300">
+            <a href="#"
+                class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Inicio</a>
+            <a href="#" class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Quiénes
+                Somos</a>
+            <a href="#" class="text-2xl font-stix font-bold text-jmj-orange transition-colors">Servicios</a>
+            <a href="#"
+                class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Contacto</a>
+            <a href="#contacto"
+                class="mt-8 bg-jmj-orange text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider">Evaluar
+                Proyecto</a>
+        </div>
+    </header>
+
+    <main class="relative pt-40 pb-32 bg-slate-900 clip-hero overflow-hidden">
+        <img src="branding/optimizadas/mina.webp" alt="Operación Minera"
+            class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity">
+        <div class="absolute top-0 left-0 w-full h-full bg-jmj-blue/80 z-10 backdrop-blur-[1px]"></div>
+        <div
+            class="absolute bottom-0 right-10 w-[30%] h-[100%] bg-jmj-orange/70 clip-slant z-10 mix-blend-multiply hidden md:block">
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <h1
+                    class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4 flex items-center gap-3">
+                    <span class="w-10 h-0.5 bg-jmj-orange"></span>
+                    Nuestras Soluciones
+                </h1>
+                <p class="font-stix italic text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+                    Maximizamos el valor de su proyecto.
+                </p>
+                <p class="text-slate-300 text-lg leading-relaxed font-light">
+                    Incrementamos sus posibilidades de éxito fusionando las prácticas de incremento de valor (VIP) de la
+                    IPA con los estándares globales del PMI.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="max-w-7xl mx-auto px-6 py-24 -mt-16 relative z-30">
+        <div
+            class="bg-white rounded-2xl shadow-premium border border-slate-100 p-10 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Metodología
+                    Comprobada</h2>
+                <p class="font-stix text-3xl md:text-4xl text-jmj-blue leading-tight mb-6">
+                    ¿Cómo lo hacemos?
+                </p>
+                <p class="text-slate-600 text-base leading-relaxed mb-6">
+                    Usamos las prácticas de incremento de valor de la IPA unidas a las buenas prácticas del PMI para
+                    garantizar la máxima rentabilidad y seguridad de su operación.
+                </p>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Facilitamos Talleres VIP liderados por un moderador experto, alineando a los equipos de ingeniería,
+                    construcción y operaciones bajo un mismo objetivo.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div
+                    class="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center hover:-translate-y-1 transition-transform duration-300">
+                    <p class="font-stix text-4xl text-jmj-blue font-bold mb-3">IPA</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Independent Project Analysis
+                    </p>
+                </div>
+                <div
+                    class="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center hover:-translate-y-1 transition-transform duration-300">
+                    <p class="font-stix text-4xl text-jmj-blue font-bold mb-3">PMI</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Project Management Institute
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <article
+                class="group bg-white p-10 rounded-2xl shadow-premium border border-slate-100 transition-all duration-500 relative overflow-hidden">
+                <div class="h-1 bg-jmj-orange line-expand mb-8 rounded-full"></div>
+                <div
+                    class="absolute top-6 right-8 text-jmj-orange text-6xl font-stix opacity-10 group-hover:opacity-20 transition-opacity font-bold">
+                    01</div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-4 relative z-10">Riesgos, Hazop y Rango</h3>
+                <p class="text-slate-600 leading-relaxed mb-6 relative z-10">
+                    Identificación sistemática de desviaciones en el diseño y operación. Evaluamos el impacto en el
+                    cronograma y CAPEX para evitar sorpresas financieras y operativas.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-500 font-semibold relative z-10">
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Análisis Cuantitativo</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Estudios de Rango</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Moderación HAZOP</li>
+                </ul>
+            </article>
+
+            <article
+                class="group bg-white p-10 rounded-2xl shadow-premium border border-slate-100 transition-all duration-500 relative overflow-hidden">
+                <div class="h-1 bg-jmj-orange line-expand mb-8 rounded-full"></div>
+                <div
+                    class="absolute top-6 right-8 text-jmj-orange text-6xl font-stix opacity-10 group-hover:opacity-20 transition-opacity font-bold">
+                    02</div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-4 relative z-10">Ingeniería RAM</h3>
+                <p class="text-slate-600 leading-relaxed mb-6 relative z-10">
+                    Estudios exhaustivos de Mantenibilidad, Confiabilidad y Operatividad. Aseguramos que sus activos
+                    rindan al máximo nivel durante todo su ciclo de vida útil.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-500 font-semibold relative z-10">
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Modelamiento de Confiabilidad</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Planes de Mantenibilidad</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Garantía Operativa</li>
+                </ul>
+            </article>
+
+            <article
+                class="group bg-white p-10 rounded-2xl shadow-premium border border-slate-100 transition-all duration-500 relative overflow-hidden">
+                <div class="h-1 bg-jmj-orange line-expand mb-8 rounded-full"></div>
+                <div
+                    class="absolute top-6 right-8 text-jmj-orange text-6xl font-stix opacity-10 group-hover:opacity-20 transition-opacity font-bold">
+                    03</div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-4 relative z-10">Valor y Constructibilidad</h3>
+                <p class="text-slate-600 leading-relaxed mb-6 relative z-10">
+                    Ingeniería de Valor para optimizar el diseño sin sacrificar función. Revisión de Constructibilidad
+                    para asegurar que lo diseñado puede ser construido eficientemente.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-500 font-semibold relative z-10">
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Optimización de Diseños</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Secuenciamiento de Obra</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Reducción de Interferencias</li>
+                </ul>
+            </article>
+
+            <article
+                class="group bg-white p-10 rounded-2xl shadow-premium border border-slate-100 transition-all duration-500 relative overflow-hidden">
+                <div class="h-1 bg-jmj-orange line-expand mb-8 rounded-full"></div>
+                <div
+                    class="absolute top-6 right-8 text-jmj-orange text-6xl font-stix opacity-10 group-hover:opacity-20 transition-opacity font-bold">
+                    04</div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-4 relative z-10">Apoyo a la Ingeniería</h3>
+                <p class="text-slate-600 leading-relaxed mb-6 relative z-10">
+                    Soporte integral que abarca desde la formulación de API's y Planes de Ejecución, hasta normativas
+                    críticas de Sustentabilidad y Eficiencia Energética.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-500 font-semibold relative z-10">
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Plan de Puesta en Marcha (PEM)</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Sustentabilidad (NCC24)</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-orange"></span>
+                        Eficiencia Energética (NCC32)</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="bg-white py-24 relative overflow-hidden border-t border-slate-100">
+        <div class="absolute top-0 right-[-10%] w-[40%] h-full bg-slate-50 clip-slant pointer-events-none z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div
+                class="flex flex-col lg:flex-row items-end justify-between gap-10 mb-16 border-b border-slate-100 pb-10">
+                <div class="max-w-2xl">
+                    <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Track Record
+                    </h2>
+                    <p class="font-stix text-4xl md:text-5xl text-jmj-blue leading-tight">
+                        Nuestro volumen de ejecución nos avala.
+                    </p>
+                </div>
+                <div class="text-slate-500 max-w-sm text-sm leading-relaxed">
+                    Hemos ejecutado decenas de talleres de altísima complejidad para la gran minería, consolidando una
+                    base de conocimiento empírico sin rival en la región.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+                <div class="border-l-[3px] border-jmj-orange pl-6 group cursor-default">
+                    <p
+                        class="text-5xl md:text-6xl font-stix text-jmj-blue mb-2 group-hover:-translate-y-2 transition-transform duration-500 ease-out">
+                        15</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Mantenibilidad</p>
+                </div>
+                <div class="border-l-[3px] border-jmj-orange pl-6 group cursor-default">
+                    <p
+                        class="text-5xl md:text-6xl font-stix text-jmj-blue mb-2 group-hover:-translate-y-2 transition-transform duration-500 ease-out">
+                        7</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Talleres HAZOP</p>
+                </div>
+                <div class="border-l-[3px] border-jmj-orange pl-6 group cursor-default">
+                    <p
+                        class="text-5xl md:text-6xl font-stix text-jmj-blue mb-2 group-hover:-translate-y-2 transition-transform duration-500 ease-out">
+                        4</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Riesgos</p>
+                </div>
+                <div class="border-l-[3px] border-jmj-orange pl-6 group cursor-default">
+                    <p
+                        class="text-5xl md:text-6xl font-stix text-jmj-blue mb-2 group-hover:-translate-y-2 transition-transform duration-500 ease-out">
+                        4</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Constructibilidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-jmj-blue relative overflow-hidden">
+        <img src="branding/optimizadas/trabajador.webp" alt="Contacto JMJ Consultores"
+            class="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-screen">
+        <div class="absolute top-0 right-[-10%] w-[50%] h-full bg-white/5 clip-slant pointer-events-none"></div>
+
+        <div class="relative z-10 pt-28 pb-20 border-b border-white/10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Hablemos de su proyecto
+            </h2>
+            <p class="font-stix text-4xl md:text-5xl text-white leading-tight mb-10">
+                ¿Listo para asegurar el éxito de su próxima inversión?
+            </p>
+            <a href="mailto:jdiaz@jmjconsultores.cl"
+                class="inline-block bg-jmj-orange text-white text-sm font-bold uppercase tracking-wider px-10 py-4 rounded hover:bg-[#d14b1c] transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(241,90,36,0.3)]">
+                Contactar a un Consultor Senior
+            </a>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+            <div class="md:col-span-2">
+                <img src="branding/optimizadas/logo-jmj-consultores-04.svg" alt="JMJ Consultores"
+                    class="h-12 mb-6 object-contain"
+                    onerror="this.src='https://placehold.co/200x50/181464/FFF?text=JMJ'">
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                    Consultoría de ingeniería de élite especializada en la reducción proactiva de riesgos, optimización
+                    de CAPEX y continuidad operativa para proyectos mineros.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Menú</h4>
+                <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-jmj-orange transition-colors">Inicio</a></li>
+                    <li><a href="#" class="hover:text-jmj-orange transition-colors">Quiénes Somos</a></li>
+                    <li><a href="#" class="text-jmj-orange transition-colors">Servicios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contacto</h4>
+                <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                    <li>Email: <a href="mailto:jdiaz@jmjconsultores.cl"
+                            class="hover:text-jmj-orange transition-colors">jdiaz@jmjconsultores.cl</a></li>
+                    <li>Teléfono: +56 9 9944 5674</li>
+                    <li>Santiago, Chile</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="relative z-10 bg-black/30 py-5 text-center text-slate-500 text-xs uppercase tracking-widest">
+            <p>&copy; 2026 JMJ Consultores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const b1 = document.getElementById('bar1');
+        const b2 = document.getElementById('bar2');
+        const b3 = document.getElementById('bar3');
+
+        btn.addEventListener('click', () => {
+            const isClosed = menu.classList.contains('hidden');
+
+            if (isClosed) {
+                menu.classList.remove('hidden');
+                setTimeout(() => menu.classList.remove('opacity-0'), 10);
+                b1.classList.add('rotate-45', 'translate-y-2');
+                b2.classList.add('opacity-0');
+                b3.classList.add('-rotate-45', '-translate-y-2');
+            } else {
+                menu.classList.add('opacity-0');
+                setTimeout(() => menu.classList.add('hidden'), 300);
+                b1.classList.remove('rotate-45', 'translate-y-2');
+                b2.classList.remove('opacity-0');
+                b3.classList.remove('-rotate-45', '-translate-y-2');
+            }
+        });
+    </script>
+</body>
+
+</html>

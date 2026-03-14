@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Logos from '../components/Logos.astro';
+import ADN from '../components/ADN.astro';
+import Authority from '../components/Authority.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+    { num: "01", title: "Talleres VIP e IPA", desc: "Facilitación experta de talleres Hazop, Rango, Mantenibilidad y Constructibilidad." },
+    { num: "02", title: "Gestión de Riesgos", desc: "Análisis cuantitativo y cualitativo integral para proteger su cronograma y presupuesto." },
+    { num: "03", title: "Ingeniería RAM", desc: "Estudios de Confiabilidad, Mantenibilidad y Operatividad para asegurar rendimiento." },
+    { num: "04", title: "Alistamiento y PEM", desc: "Desarrollo de Planes de Ejecución, Alistamiento Operacional y Puesta en Marcha." }
+];
+---
+
+<BaseLayout title="JMJ Consultores - Gestión de Riesgos en Minería">
+    <Header />
+
+    <main>
+        <Hero />
+        <Logos />
+        <ADN />
+
+        <section id="servicios" class="bg-slate-50 py-24 mt-12 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5 lg:sticky lg:top-32 h-fit">
+                    <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Soluciones Core</h2>
+                    <p class="font-stix text-4xl md:text-5xl text-jmj-blue leading-tight mb-6">
+                        Especialistas en cada fase del ciclo de vida del proyecto.
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        Aplicamos nuestro rigor predictivo mediante metodologías probadas (IPA, PMI) en más de 37 proyectos
+                        a lo largo de Sudamérica.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {services.map((service) => (
+                        <div class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer">
+                            <div class="text-jmj-orange text-xl mb-4 font-black opacity-50">{service.num}</div>
+                            <h3 class="text-xl font-bold text-jmj-blue mb-3 group-hover:text-jmj-orange transition-colors">
+                                {service.title}</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">{service.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-32 bg-jmj-blue overflow-hidden">
+            <img src="/assets/images/noche.webp" alt="Minería nocturna"
+                class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-screen">
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Experiencia
+                        Comprobada</h2>
+                    <p class="font-stix text-4xl text-white leading-tight">Resultados respaldados por evidencia técnica.</p>
+                </div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/10 w-full">
+                    <div class="pt-6 md:pt-0">
+                        <p class="text-6xl md:text-7xl font-light font-stix text-white mb-2">37<span
+                                class="text-jmj-orange">+</span></p>
+                        <p class="text-slate-300 text-sm uppercase tracking-widest font-bold">Talleres VIP ejecutados</p>
+                    </div>
+                    <div class="pt-6 md:pt-0">
+                        <p class="text-6xl md:text-7xl font-light font-stix text-white mb-2">20<span
+                                class="text-jmj-orange">+</span></p>
+                        <p class="text-slate-300 text-sm uppercase tracking-widest font-bold">Años de experiencia base</p>
+                    </div>
+                    <div class="pt-6 md:pt-0">
+                        <p class="text-6xl md:text-7xl font-light font-stix text-white mb-2">4</p>
+                        <p class="text-slate-300 text-sm uppercase tracking-widest font-bold">Países de operación</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Authority />
+    </main>
+
+    <Footer />
+</BaseLayout>

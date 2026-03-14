@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Contacto - JMJ Consultores">
+    <Header />
+
+    <main>
+        <!-- Hero Section Contacto -->
+        <section class="relative pt-40 pb-32 bg-slate-900 clip-hero overflow-hidden">
+            <img src="/assets/images/noche.webp" alt="Operación Minera Nocturna"
+                class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity">
+            <div class="absolute top-0 left-0 w-full h-full bg-jmj-blue/80 z-10 backdrop-blur-[1px]"></div>
+            <div
+                class="absolute bottom-0 right-10 w-[30%] h-[100%] bg-jmj-orange/70 clip-slant z-10 mix-blend-multiply hidden md:block">
+            </div>
+
+            <div class="relative z-20 max-w-7xl mx-auto px-6">
+                <div class="max-w-3xl">
+                    <h1 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4 flex items-center gap-3 animate-fadeIn">
+                        <span class="w-10 h-0.5 bg-jmj-orange"></span>
+                        Hablemos de su proyecto
+                    </h1>
+                    <p class="font-stix italic text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6 animate-fadeInUp">
+                        Asegure el éxito de su próxima inversión.
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed font-light animate-fadeInUp delay-200">
+                        Comuníquese con nuestros consultores senior para agendar una evaluación preliminar de riesgos y
+                        oportunidades para su operación.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario y Datos Section -->
+        <section class="max-w-7xl mx-auto px-6 py-20 -mt-16 relative z-30">
+            <div class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden flex flex-col lg:flex-row">
+
+                <div class="lg:w-5/12 bg-slate-50 p-10 md:p-16 border-r border-slate-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-jmj-blue/5 clip-slant translate-x-10 -translate-y-10">
+                    </div>
+
+                    <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Contacto Directo</h2>
+                    <p class="font-stix text-3xl text-jmj-blue leading-tight mb-10 font-bold">
+                        Atención Corporativa
+                    </p>
+
+                    <div class="space-y-8 mb-12">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Director Consultor</p>
+                            <p class="text-lg text-jmj-blue font-semibold">José Miguel Díaz</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Correo Electrónico</p>
+                            <a href="mailto:jdiaz@jmjconsultores.cl"
+                                class="text-lg text-jmj-blue font-semibold hover:text-jmj-orange transition-colors">jdiaz@jmjconsultores.cl</a>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Teléfono Móvil</p>
+                            <a href="tel:+56999445674"
+                                class="text-lg text-jmj-blue font-semibold hover:text-jmj-orange transition-colors">+56 9 9944 5674</a>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-slate-200">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Cobertura Regional</p>
+                        <ul class="space-y-3 text-sm text-slate-600 font-medium">
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                                Chile (Santiago / Rancagua)</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                                Perú (Lima)</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                                Argentina</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                                Brasil (Maceió)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:w-7/12 p-10 md:p-16">
+                    <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Envíenos un mensaje</h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Complete el formulario a continuación detallando los requerimientos de su proyecto. Un especialista
+                        se pondrá en contacto a la brevedad.
+                    </p>
+
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nombre" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required
+                                    class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                            </div>
+                            <div>
+                                <label for="empresa" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Empresa *</label>
+                                <input type="text" id="empresa" name="empresa" required
+                                    class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Correo Corporativo *</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono"
+                                    class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Detalles del Proyecto / Consulta *</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required
+                                class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none resize-none"></textarea>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit"
+                                class="w-full md:w-auto inline-flex justify-center items-center gap-2 bg-jmj-orange text-white text-sm font-bold uppercase tracking-wider px-10 py-4 rounded hover:bg-[#d14b1c] transition-all shadow-[0_10px_20px_rgba(241,90,36,0.3)] hover:-translate-y-1 cursor-pointer">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer showCTA={false} />
+</BaseLayout>
+
+<style>
+    .delay-200 { animation-delay: 0.2s; }
+</style>

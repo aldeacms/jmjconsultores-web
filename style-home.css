@@ -1,0 +1,56 @@
+/* style-home.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #334155;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-stix {
+    font-family: 'STIX Two Text', serif;
+}
+
+/* === GEOMETRÍA DEL MANUAL DE MARCA === */
+/* Corte inferior del Hero */
+.clip-hero {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+/* Paralelogramo JMJ (Inclinación corporativa) */
+.clip-slant {
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+/* Acento superpuesto en el Hero */
+.clip-accent {
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+/* === SOMBRAS Y MICROANIMACIONES PREMIUM === */
+.shadow-premium {
+    box-shadow: 0 10px 30px -10px rgba(24, 20, 100, 0.05);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-premium:hover {
+    box-shadow: 0 20px 40px -12px rgba(24, 20, 100, 0.15);
+    transform: translateY(-6px);
+}
+
+/* Efecto de línea que se expande en las tarjetas */
+.line-expand {
+    transition: width 0.4s ease-out;
+    width: 2rem;
+    /* 32px inicial */
+}
+
+.group:hover .line-expand {
+    width: 4rem;
+    /* 64px al hacer hover */
+}

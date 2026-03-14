@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-jmj-blue: #181464;
+  --color-jmj-orange: #F15A24;
+  
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-stix: 'STIX Two Text', serif;
+  
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'STIX Two Text', serif;
+}
+
+/* === GEOMETRÍA DEL MANUAL DE MARCA === */
+@utility clip-hero {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+@utility clip-slant {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+@utility clip-accent {
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+/* === SOMBRAS Y MICROANIMACIONES PREMIUM === */
+@utility shadow-premium {
+  box-shadow: 0 10px 30px -10px rgba(24, 20, 100, 0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 0 20px 40px -12px rgba(24, 20, 100, 0.15);
+    transform: translateY(-6px);
+  }
+}
+
+@utility line-expand {
+  transition: width 0.4s ease-out;
+  width: 2rem;
+}
+
+.group:hover .line-expand {
+  width: 4rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Asegurar base consistente */
+  }
+  body {
+    @apply font-montserrat bg-white text-[#334155] antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-stix {
+  font-family: 'STIX Two Text', serif;
+}
+
+@layer utilities {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+}

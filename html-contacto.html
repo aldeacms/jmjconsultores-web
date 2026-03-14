@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - JMJ Consultores</title>
+    <link rel="stylesheet" href="style-home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jmj: { blue: '#181464', orange: '#F15A24' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="antialiased bg-slate-50">
+
+    <header
+        class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="relative z-50">
+                <img src="branding/optimizadas/logo-jmj-consultores-01.svg" alt="JMJ Consultores"
+                    class="h-12 md:h-14 object-contain"
+                    onerror="this.src='https://placehold.co/200x50/181464/FFF?text=JMJ'">
+            </a>
+
+            <nav class="hidden md:flex gap-10 text-[13px] font-bold text-jmj-blue tracking-widest uppercase">
+                <a href="#" class="hover:text-jmj-orange transition-colors">Inicio</a>
+                <a href="#" class="hover:text-jmj-orange transition-colors">Quiénes Somos</a>
+                <a href="#" class="hover:text-jmj-orange transition-colors">Servicios</a>
+                <a href="#" class="text-jmj-orange transition-colors">Contacto</a>
+            </nav>
+            <a href="#contacto"
+                class="hidden lg:inline-block bg-jmj-orange text-white px-7 py-3 rounded text-[13px] font-bold uppercase tracking-wider hover:bg-[#d14b1c] transition-colors shadow-lg hover:shadow-jmj-orange/30">
+                Evaluar Proyecto
+            </a>
+
+            <button id="menu-btn"
+                class="md:hidden relative z-50 text-jmj-blue focus:outline-none w-8 h-8 flex flex-col justify-center items-center gap-1.5">
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar1"></span>
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar2"></span>
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar3"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-jmj-blue/98 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-300">
+            <a href="#"
+                class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Inicio</a>
+            <a href="#" class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Quiénes
+                Somos</a>
+            <a href="#"
+                class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Servicios</a>
+            <a href="#" class="text-2xl font-stix font-bold text-jmj-orange transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <main class="relative pt-40 pb-32 bg-slate-900 clip-hero overflow-hidden">
+        <img src="branding/optimizadas/noche.webp" alt="Operación Minera Nocturna"
+            class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity">
+        <div class="absolute top-0 left-0 w-full h-full bg-jmj-blue/80 z-10 backdrop-blur-[1px]"></div>
+        <div
+            class="absolute bottom-0 right-10 w-[30%] h-[100%] bg-jmj-orange/70 clip-slant z-10 mix-blend-multiply hidden md:block">
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <h1
+                    class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4 flex items-center gap-3">
+                    <span class="w-10 h-0.5 bg-jmj-orange"></span>
+                    Hablemos de su proyecto
+                </h1>
+                <p class="font-stix italic text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+                    Asegure el éxito de su próxima inversión.
+                </p>
+                <p class="text-slate-300 text-lg leading-relaxed font-light">
+                    Comuníquese con nuestros consultores senior para agendar una evaluación preliminar de riesgos y
+                    oportunidades para su operación.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="max-w-7xl mx-auto px-6 py-20 -mt-16 relative z-30">
+        <div
+            class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden flex flex-col lg:flex-row">
+
+            <div class="lg:w-5/12 bg-slate-50 p-10 md:p-16 border-r border-slate-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-jmj-blue/5 clip-slant translate-x-10 -translate-y-10">
+                </div>
+
+                <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Contacto Directo
+                </h2>
+                <p class="font-stix text-3xl text-jmj-blue leading-tight mb-10 font-bold">
+                    Atención Corporativa
+                </p>
+
+                <div class="space-y-8 mb-12">
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Director Consultor
+                        </p>
+                        <p class="text-lg text-jmj-blue font-semibold">José Miguel Díaz</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Correo Electrónico
+                        </p>
+                        <a href="mailto:jdiaz@jmjconsultores.cl"
+                            class="text-lg text-jmj-blue font-semibold hover:text-jmj-orange transition-colors">jdiaz@jmjconsultores.cl</a>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Teléfono Móvil</p>
+                        <a href="tel:+56999445674"
+                            class="text-lg text-jmj-blue font-semibold hover:text-jmj-orange transition-colors">+56 9
+                            9944 5674</a>
+                    </div>
+                </div>
+
+                <div class="pt-8 border-t border-slate-200">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Cobertura Regional</p>
+                    <ul class="space-y-3 text-sm text-slate-600 font-medium">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                            Chile (Santiago / Rancagua)</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                            Perú (Lima)</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                            Argentina</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-jmj-blue"></span>
+                            Brasil (Maceió)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lg:w-7/12 p-10 md:p-16">
+                <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Envíenos un mensaje
+                </h2>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Complete el formulario a continuación detallando los requerimientos de su proyecto. Un especialista
+                    se pondrá en contacto a la brevedad.
+                </p>
+
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nombre"
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nombre
+                                Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required
+                                class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                        </div>
+                        <div>
+                            <label for="empresa"
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Empresa
+                                *</label>
+                            <input type="text" id="empresa" name="empresa" required
+                                class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email"
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Correo
+                                Corporativo *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                        </div>
+                        <div>
+                            <label for="telefono"
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono"
+                                class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="mensaje"
+                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Detalles del
+                            Proyecto / Consulta *</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required
+                            class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-jmj-orange focus:border-jmj-orange block p-3.5 transition-colors outline-none resize-none"></textarea>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="w-full md:w-auto inline-flex justify-center items-center gap-2 bg-jmj-orange text-white text-sm font-bold uppercase tracking-wider px-10 py-4 rounded hover:bg-[#d14b1c] transition-all shadow-[0_10px_20px_rgba(241,90,36,0.3)] hover:-translate-y-1 cursor-pointer">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-jmj-blue relative overflow-hidden mt-12">
+        <img src="branding/optimizadas/trabajador.webp" alt="Contacto JMJ Consultores"
+            class="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-screen">
+        <div class="absolute top-0 right-[-10%] w-[50%] h-full bg-white/5 clip-slant pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mt-10">
+            <div class="md:col-span-2">
+                <img src="branding/optimizadas/logo-jmj-consultores-04.svg" alt="JMJ Consultores"
+                    class="h-12 mb-6 object-contain"
+                    onerror="this.src='https://placehold.co/200x50/181464/FFF?text=JMJ'">
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                    Consultoría de ingeniería de élite especializada en la reducción proactiva de riesgos, optimización
+                    de CAPEX y continuidad operativa para proyectos mineros.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Menú</h4>
+                <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-jmj-orange transition-colors">Inicio</a></li>
+                    <li><a href="#" class="hover:text-jmj-orange transition-colors">Quiénes Somos</a></li>
+                    <li><a href="#" class="hover:text-jmj-orange transition-colors">Servicios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contacto</h4>
+                <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                    <li>Email: <a href="mailto:jdiaz@jmjconsultores.cl"
+                            class="hover:text-jmj-orange transition-colors">jdiaz@jmjconsultores.cl</a></li>
+                    <li>Teléfono: +56 9 9944 5674</li>
+                    <li>Santiago, Chile</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="relative z-10 bg-black/30 py-5 text-center text-slate-500 text-xs uppercase tracking-widest">
+            <p>&copy; 2026 JMJ Consultores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const b1 = document.getElementById('bar1');
+        const b2 = document.getElementById('bar2');
+        const b3 = document.getElementById('bar3');
+
+        btn.addEventListener('click', () => {
+            const isClosed = menu.classList.contains('hidden');
+            if (isClosed) {
+                menu.classList.remove('hidden');
+                setTimeout(() => menu.classList.remove('opacity-0'), 10);
+                b1.classList.add('rotate-45', 'translate-y-2');
+                b2.classList.add('opacity-0');
+                b3.classList.add('-rotate-45', '-translate-y-2');
+            } else {
+                menu.classList.add('opacity-0');
+                setTimeout(() => menu.classList.add('hidden'), 300);
+                b1.classList.remove('rotate-45', 'translate-y-2');
+                b2.classList.remove('opacity-0');
+                b3.classList.remove('-rotate-45', '-translate-y-2');
+            }
+        });
+    </script>
+</body>
+
+</html>

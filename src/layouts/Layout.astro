@@ -1,0 +1,23 @@
+---
+import '../styles/global.css';
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = "Era 4 Headless", description = "Sitio Web de Alto Rendimiento" } = Astro.props;
+---
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-surface text-main antialiased font-body min-h-screen flex flex-col">
+		<slot />
+	</body>
+</html>
+

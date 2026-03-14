@@ -1,0 +1,39 @@
+---
+/**
+ * Componente Section Base (Era 4)
+ * Implementa el Patrón SEO Aldea y layout de contenedor máximo.
+ */
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  class?: string;
+  id?: string;
+}
+
+const { 
+  eyebrow, 
+  title, 
+  class: className = "", 
+  id 
+} = Astro.props;
+---
+
+<section id={id} class:list={["py-16 md:py-24 px-6", className]}>
+  <div class="max-w-7xl mx-auto w-full">
+    { (eyebrow || title) && (
+      <header class="mb-12 max-w-3xl">
+        {eyebrow && (
+          <h2 class="text-sm font-black uppercase tracking-[0.2em] text-primary mb-4">
+            {eyebrow}
+          </h2>
+        )}
+        {title && (
+          <p class="text-4xl md:text-6xl font-extrabold text-heading leading-tight italic">
+            {title}
+          </p>
+        )}
+      </header>
+    )}
+    <slot />
+  </div>
+</section>

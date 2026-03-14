@@ -1,0 +1,58 @@
+---
+interface Props {
+    showCTA?: boolean;
+}
+
+const { showCTA = true } = Astro.props;
+---
+<footer id="contacto" class="bg-jmj-blue relative overflow-hidden">
+    <img src="/assets/images/trabajador.webp" alt="Contacto JMJ Consultores"
+        class="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-screen">
+    <div class="absolute top-0 right-[-10%] w-[50%] h-full bg-white/5 clip-slant pointer-events-none"></div>
+
+    {showCTA && (
+        <div class="relative z-10 pt-28 pb-20 border-b border-white/10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Hablemos de su proyecto
+            </h2>
+            <p class="font-stix text-4xl md:text-5xl text-white leading-tight mb-10">
+                ¿Listo para asegurar el éxito de su próxima inversión?
+            </p>
+            <a href="mailto:jdiaz@jmjconsultores.cl"
+                class="inline-block bg-jmj-orange text-white text-sm font-bold uppercase tracking-wider px-10 py-4 rounded hover:bg-[#d14b1c] transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(241,90,36,0.3)]">
+                Contactar a un Consultor Senior
+            </a>
+        </div>
+    )}
+
+    <div class={`relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 text-white ${showCTA ? 'py-16' : 'pt-24 pb-16'}`}>
+        <div class="md:col-span-2">
+            <img src="/assets/branding/logo.svg" alt="JMJ Consultores"
+                class="h-12 mb-6 object-contain brightness-0 invert opacity-100">
+            <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                Consultoría de ingeniería de élite especializada en la reducción proactiva de riesgos, optimización
+                de CAPEX y continuidad operativa para proyectos mineros.
+            </p>
+        </div>
+        <div>
+            <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Menú</h3>
+            <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                <li><a href="/" class="hover:text-jmj-orange transition-colors">Inicio</a></li>
+                <li><a href="/nosotros" class="hover:text-jmj-orange transition-colors">Quiénes Somos</a></li>
+                <li><a href="/servicios" class="hover:text-jmj-orange transition-colors">Servicios</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contacto</h3>
+            <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                <li>Email: <a href="mailto:jdiaz@jmjconsultores.cl"
+                        class="hover:text-jmj-orange transition-colors">jdiaz@jmjconsultores.cl</a></li>
+                <li>Teléfono: +56 9 9944 5674</li>
+                <li>Santiago, Chile</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="relative z-10 bg-black/30 py-5 text-center text-slate-500 text-xs uppercase tracking-widest">
+        <p>&copy; 2026 JMJ Consultores. Todos los derechos reservados.</p>
+    </div>
+</footer>

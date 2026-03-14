@@ -1,0 +1,104 @@
+/* ============================================================
+   LIFE FOCUS FRAMEWORK — lifefocus-tokens.css
+   v4.0.0 (Clean Slate Edition) | Daniel Aldea | 2026
+   ============================================================
+   CAPA 1: Core tokens (OKLCH, light-dark, fluid-scales)
+   ============================================================ */
+
+:root {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+
+  /* 1. BASE SETTINGS */
+  --root-font-size: 100%;
+  font-size: var(--root-font-size);
+
+  /* 2. COLOR SYSTEM (JMJ Consultores) */
+  --color-jmj-blue: #181464;
+  --color-jmj-orange: #F15A24;
+  --color-jmj-blue-light: #0071BC;
+
+  /* Semantic Colors */
+  --primary: var(--color-jmj-blue);
+  --primary-hover: #110f4a;
+  --accent: var(--color-jmj-orange);
+
+  /* Surface Colors */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8f9fa;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f1f3f5;
+  --color-border: #e9ecef;
+
+  /* Text Colors */
+  --color-text: #343a40;
+  --color-text-heading: var(--color-jmj-blue);
+  --color-text-muted: #6c757d;
+  --color-text-invert: #ffffff;
+
+  /* 3. TYPOGRAPHY (JMJ Consultores) */
+  --font-body: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'STIX Two Text', serif;
+
+  --leading-body: 1.6;
+  --leading-heading: 1.2;
+
+  /* Weights */
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* Fluid Text Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-s: clamp(0.875rem, 0.8rem + 0.35vw, 1.0rem);
+  --text-m: clamp(1.0rem, 0.95rem + 0.5vw, 1.125rem);
+  --text-l: clamp(1.25rem, 1.1rem + 1vw, 1.75rem);
+  --text-xl: clamp(1.75rem, 1.5rem + 1.5vw, 2.5rem);
+  --text-xxl: clamp(2.5rem, 2rem + 2.5vw, 3.5rem);
+
+  /* Spacing */
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 6rem;
+
+  --section-space: var(--space-l);
+  --gutter: clamp(1rem, 0.8rem + 1.5vw, 2.5rem);
+
+  /* Layout */
+  --width-max: 80rem;
+  --width-max-safe: min(var(--width-max), 100% - (var(--gutter) * 2));
+
+  --radius-m: 0.5rem;
+  --transition-normal: 250ms ease;
+  --shadow-m: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-m);
+  line-height: var(--leading-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+  font-family: var(--font-heading);
+  line-height: var(--leading-heading);
+  color: var(--color-text-heading);
+  font-weight: var(--weight-bold);
+  margin: 0;
+}
+
+.h1 { font-size: var(--text-xxl); }
+.h2 { font-size: var(--text-xl); }
+.h3 { font-size: var(--text-l); }
+
+a {
+  color: var(--primary);
+  transition: color var(--transition-normal);
+}

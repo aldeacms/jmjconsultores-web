@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - JMJ Consultores</title>
+    <link rel="stylesheet" href="style-home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { jmj: { blue: '#181464', orange: '#F15A24' } } } }
+        }
+    </script>
+</head>
+
+<body class="antialiased bg-slate-50">
+
+    <header
+        class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="relative z-50">
+                <img src="branding/logo-jmj-consultores-01.svg" alt="JMJ Consultores"
+                    class="h-12 md:h-14 object-contain">
+            </a>
+
+            <nav class="hidden md:flex gap-10 text-[13px] font-bold text-jmj-blue tracking-widest uppercase">
+                <a href="#" class="hover:text-jmj-orange transition-colors">Inicio</a>
+                <a href="#" class="text-jmj-orange transition-colors">Quiénes Somos</a>
+                <a href="#servicios" class="hover:text-jmj-orange transition-colors">Servicios</a>
+                <a href="#contacto" class="hover:text-jmj-orange transition-colors">Contacto</a>
+            </nav>
+            <a href="#contacto"
+                class="hidden lg:inline-block bg-jmj-orange text-white px-7 py-3 rounded text-[13px] font-bold uppercase tracking-wider hover:bg-[#d14b1c] transition-colors shadow-lg hover:shadow-jmj-orange/30">
+                Evaluar Proyecto
+            </a>
+
+            <button id="menu-btn"
+                class="md:hidden relative z-50 text-jmj-blue focus:outline-none w-8 h-8 flex flex-col justify-center items-center gap-1.5 group">
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar1"></span>
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar2"></span>
+                <span class="w-full h-0.5 bg-current transition-all duration-300" id="bar3"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-jmj-blue/98 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-300">
+            <a href="#"
+                class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Inicio</a>
+            <a href="#" class="text-2xl font-stix font-bold text-jmj-orange transition-colors">Quiénes Somos</a>
+            <a href="#"
+                class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Servicios</a>
+            <a href="#"
+                class="text-2xl font-stix font-bold text-white hover:text-jmj-orange transition-colors">Contacto</a>
+            <a href="#contacto"
+                class="mt-8 bg-jmj-orange text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider">Evaluar
+                Proyecto</a>
+        </div>
+    </header>
+
+    <main class="relative pt-40 pb-32 bg-slate-900 clip-hero overflow-hidden">
+        <img src="branding/optimizadas/juicio.webp" alt="Reunión Directorio"
+            class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity">
+        <div class="absolute top-0 left-0 w-full h-full bg-jmj-blue/80 z-10 backdrop-blur-[1px]"></div>
+        <div
+            class="absolute bottom-0 right-10 w-[30%] h-[100%] bg-jmj-orange/70 clip-slant z-10 mix-blend-multiply hidden md:block">
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <h1
+                    class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4 flex items-center gap-3">
+                    <span class="w-10 h-0.5 bg-jmj-orange"></span>
+                    Socio de Alto Rendimiento
+                </h1>
+                <p class="font-stix italic text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+                    Liderazgo técnico para decisiones críticas.
+                </p>
+                <p class="text-slate-300 text-lg leading-relaxed font-light">
+                    Una consultoría de ingenieros para ingenieros. Maximizamos el valor de su proyecto u operación,
+                    incrementando sus posibilidades de éxito con un enfoque colaborativo y rigor predictivo.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="max-w-7xl mx-auto px-6 py-24 -mt-16 relative z-30">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Nuestro Equipo</h2>
+            <p class="font-stix text-4xl text-jmj-blue leading-tight mb-6">
+                Consultores con vasta trayectoria. "Saben Hacer" y "Pueden Hacer".
+            </p>
+            <p class="text-slate-600 text-base leading-relaxed">
+                Asignamos a sus proyectos profesionales certificados con maestría y más de 20 años de experiencia
+                operando en la gran minería para compañías como Codelco, BHP, Anglo American y Collahuasi.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <article
+                class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-jmj-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+                </div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-1">José Miguel Díaz</h3>
+                <p class="text-jmj-orange text-xs font-bold uppercase tracking-widest mb-4">Gestión de Riesgos y
+                    Cronograma</p>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">Ingeniero Civil Industrial U. de Chile. MBA,
+                    PMP®, Master en Gestión de Riesgos, PMO-CC®. 24 años de experiencia.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">Codelco</span>
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">BHP</span>
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">Anglo
+                        American</span>
+                </div>
+            </article>
+
+            <article
+                class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-jmj-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+                </div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-1">Osvaldo Ortiz</h3>
+                <p class="text-jmj-orange text-xs font-bold uppercase tracking-widest mb-4">Gestión de Riesgos y Rango
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">Ingeniero Civil USACH. Análisis cuantitativo
+                    (experto P6, Primavera Risk, @Risk). 22 años de experiencia en proyectos.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">Collahuasi</span>
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">Teck</span>
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">ENAP</span>
+                </div>
+            </article>
+
+            <article
+                class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-jmj-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+                </div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-1">José Miguel Gramsch</h3>
+                <p class="text-jmj-orange text-xs font-bold uppercase tracking-widest mb-4">Mantenibilidad y
+                    Confiabilidad</p>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">Ingeniero Civil Industrial Eléctrico PUC. Master
+                    en Ciencias Aplicadas. 25 años de experiencia, 7 años como garante en Codelco.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">Operatividad</span>
+                    <span
+                        class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">Vulnerabilidad</span>
+                </div>
+            </article>
+
+            <article
+                class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-jmj-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+                </div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-1">Cristian Lillo</h3>
+                <p class="text-jmj-orange text-xs font-bold uppercase tracking-widest mb-4">Constructibilidad y Capex
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">Ingeniero Civil Mecánico. Master en Construcción
+                    y PM, PMP®. 20 años de experiencia en ingeniería y construcción de proyectos.</p>
+            </article>
+
+            <article
+                class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-jmj-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+                </div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-1">Juan Carlos Ávila</h3>
+                <p class="text-jmj-orange text-xs font-bold uppercase tracking-widest mb-4">Constructibilidad y PEM</p>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">Ingeniero Civil. MBA, PMP®, Maestría en
+                    Construcción y Gestión Ambiental. 30 años de experiencia como gerente de proyectos.</p>
+            </article>
+
+            <article
+                class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-jmj-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+                </div>
+                <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-1">Nelson Garate</h3>
+                <p class="text-jmj-orange text-xs font-bold uppercase tracking-widest mb-4">Alistamiento y PEM</p>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">Ingeniero Civil Industrial y Ejecución
+                    Electrónico, MBA. 20 años de experiencia. Especialista en comisionamiento y eficiencia energética.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="bg-white py-24 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Cobertura Regional
+                </h2>
+                <p class="font-stix text-4xl md:text-5xl text-jmj-blue leading-tight mb-6">
+                    Operamos en los polos mineros más exigentes de Sudamérica.
+                </p>
+                <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                    Nuestra capacidad de despliegue nos permite asistir a la gran minería e industria en ubicaciones
+                    estratégicas, aportando conocimiento técnico adaptado a las normativas de cada país.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-xl font-stix text-jmj-blue">
+                            CL</div>
+                        <div>
+                            <p class="font-bold text-jmj-blue">Chile</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest">Santiago / Rancagua</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-xl font-stix text-jmj-blue">
+                            PE</div>
+                        <div>
+                            <p class="font-bold text-jmj-blue">Perú</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest">Lima</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-xl font-stix text-jmj-blue">
+                            AR</div>
+                        <div>
+                            <p class="font-bold text-jmj-blue">Argentina</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest">San Juan</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-xl font-stix text-jmj-blue">
+                            BR</div>
+                        <div>
+                            <p class="font-bold text-jmj-blue">Brasil</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest">Maceió</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative h-[500px] w-full bg-slate-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-jmj-blue/5 to-transparent">
+                </div>
+                <div class="w-64 h-64 border-[10px] border-jmj-orange/20 rounded-full flex items-center justify-center">
+                    <div class="w-48 h-48 border-[10px] border-jmj-blue/10 rounded-full"></div>
+                </div>
+                <p class="absolute font-stix text-jmj-blue text-2xl font-bold italic opacity-30">Sudamérica</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-jmj-blue relative overflow-hidden">
+        <img src="branding/optimizadas/trabajador.webp" alt="Contacto JMJ Consultores"
+            class="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-screen">
+        <div class="absolute top-0 right-[-10%] w-[50%] h-full bg-white/5 clip-slant pointer-events-none"></div>
+
+        <div class="relative z-10 pt-28 pb-20 border-b border-white/10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Hablemos de su proyecto
+            </h2>
+            <p class="font-stix text-4xl md:text-5xl text-white leading-tight mb-10">
+                ¿Listo para asegurar el éxito de su próxima inversión?
+            </p>
+            <a href="mailto:jdiaz@jmjconsultores.cl"
+                class="inline-block bg-jmj-orange text-white text-sm font-bold uppercase tracking-wider px-10 py-4 rounded hover:bg-[#d14b1c] transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(241,90,36,0.3)]">
+                Contactar a un Consultor Senior
+            </a>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+            <div class="md:col-span-2">
+                <img src="branding/logo-jmj-consultores-04.svg" alt="JMJ Consultores" class="h-12 mb-6 object-contain">
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                    Consultoría de ingeniería de élite especializada en la reducción proactiva de riesgos, optimización
+                    de CAPEX y continuidad operativa para proyectos mineros.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Menú</h4>
+                <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-jmj-orange transition-colors">Inicio</a></li>
+                    <li><a href="#" class="text-jmj-orange transition-colors">Quiénes Somos</a></li>
+                    <li><a href="#servicios" class="hover:text-jmj-orange transition-colors">Servicios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contacto</h4>
+                <ul class="flex flex-col gap-4 text-slate-400 text-sm">
+                    <li>Email: <a href="mailto:jdiaz@jmjconsultores.cl"
+                            class="hover:text-jmj-orange transition-colors">jdiaz@jmjconsultores.cl</a></li>
+                    <li>Teléfono: +56 9 9944 5674</li>
+                    <li>Santiago, Chile</li>
+                </ul>
+            </div>
+        </div>
+        <div class="relative z-10 bg-black/30 py-5 text-center text-slate-500 text-xs uppercase tracking-widest">
+            <p>&copy; 2026 JMJ Consultores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const b1 = document.getElementById('bar1');
+        const b2 = document.getElementById('bar2');
+        const b3 = document.getElementById('bar3');
+
+        btn.addEventListener('click', () => {
+            const isClosed = menu.classList.contains('hidden');
+
+            if (isClosed) {
+                // Abrir
+                menu.classList.remove('hidden');
+                setTimeout(() => menu.classList.remove('opacity-0'), 10);
+                // Animar hamburguesa a X
+                b1.classList.add('rotate-45', 'translate-y-2');
+                b2.classList.add('opacity-0');
+                b3.classList.add('-rotate-45', '-translate-y-2');
+            } else {
+                // Cerrar
+                menu.classList.add('opacity-0');
+                setTimeout(() => menu.classList.add('hidden'), 300);
+                // Animar X a hamburguesa
+                b1.classList.remove('rotate-45', 'translate-y-2');
+                b2.classList.remove('opacity-0');
+                b3.classList.remove('-rotate-45', '-translate-y-2');
+            }
+        });
+    </script>
+</body>
+
+</html>

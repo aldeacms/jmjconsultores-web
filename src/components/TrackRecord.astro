@@ -1,0 +1,48 @@
+---
+const stats = [
+  {
+    number: "37+",
+    label: "Talleres VIP ejecutados con éxito"
+  },
+  {
+    number: "20+",
+    label: "Años de experiencia promedio por consultor"
+  },
+  {
+    number: "4",
+    label: "Países de operación (CL, PE, AR, BR)"
+  }
+];
+---
+
+<section class="py-32 bg-[#181464] text-white relative">
+  <div class="container max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-4 gap-12 items-end">
+      <div class="lg:col-span-1">
+        <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-[#F15A24] mb-6">
+          TRACK RECORD
+        </h2>
+        <p class="font-serif text-3xl font-extrabold mb-4 leading-tight">
+          Resultados respaldados por evidencia técnica.
+        </p>
+      </div>
+
+      <div class="lg:col-span-3 grid md:grid-cols-3 gap-16 md:pl-12 border-l border-white/10">
+        {stats.map((stat) => (
+          <div class="group">
+            <div class="text-7xl md:text-8xl font-light text-white mb-6 tabular-nums tracking-tighter">
+              {stat.number}
+            </div>
+            <div class="h-1 w-12 bg-[#F15A24] mb-6 group-hover:w-20 transition-all duration-500"></div>
+            <p class="text-slate-300 text-sm uppercase tracking-widest font-medium leading-relaxed">
+              {stat.label}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative technical element -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(241,90,36,0.05)_0%,_transparent_50%)]"></div>
+</section>

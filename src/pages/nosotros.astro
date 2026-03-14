@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const team = [
+    {
+        name: "José Miguel Díaz",
+        role: "Gestión de Riesgos y Cronograma",
+        desc: "Ingeniero Civil Industrial U. de Chile. MBA, PMP®, Master en Gestión de Riesgos, PMO-CC®. 24 años de experiencia.",
+        clients: ["Codelco", "BHP", "Anglo American"]
+    },
+    {
+        name: "Osvaldo Ortiz",
+        role: "Gestión de Riesgos y Rango",
+        desc: "Ingeniero Civil USACH. Análisis cuantitativo (experto P6, Primavera Risk, @Risk). 22 años de experiencia en proyectos.",
+        clients: ["Collahuasi", "Teck", "ENAP"]
+    },
+    {
+        name: "José Miguel Gramsch",
+        role: "Mantenibilidad y Confiabilidad",
+        desc: "Ingeniero Civil Industrial Eléctrico PUC. Master en Ciencias Aplicadas. 25 años de experiencia, 7 años como garante en Codelco.",
+        clients: ["Operatividad", "Vulnerabilidad"]
+    },
+    {
+        name: "Cristian Lillo",
+        role: "Constructibilidad y Capex",
+        desc: "Ingeniero Civil Mecánico. Master en Construcción y PM, PMP®. 20 años de experiencia en ingeniería y construcción de proyectos.",
+        clients: []
+    },
+    {
+        name: "Juan Carlos Ávila",
+        role: "Constructibilidad y PEM",
+        desc: "Ingeniero Civil. MBA, PMP®, Maestría en Construcción y Gestión Ambiental. 30 años de experiencia como gerente de proyectos.",
+        clients: []
+    },
+    {
+        name: "Nelson Garate",
+        role: "Alistamiento y PEM",
+        desc: "Ingeniero Civil Industrial y Ejecución Electrónico, MBA. 20 años de experiencia. Especialista en comisionamiento y eficiencia energética.",
+        clients: []
+    }
+];
+
+const coverage = [
+    { code: "CL", country: "Chile", locations: "Santiago / Rancagua" },
+    { code: "PE", country: "Perú", locations: "Lima" },
+    { code: "AR", country: "Argentina", locations: "San Juan" },
+    { code: "BR", country: "Brasil", locations: "Maceió" }
+];
+---
+
+<BaseLayout title="Quiénes Somos - JMJ Consultores">
+    <Header />
+
+    <main>
+        <!-- Hero Section Nosotros -->
+        <section class="relative pt-40 pb-32 bg-slate-900 clip-hero overflow-hidden">
+            <img src="/assets/images/juicio.webp" alt="Reunión Directorio"
+                class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity">
+            <div class="absolute top-0 left-0 w-full h-full bg-jmj-blue/80 z-10 backdrop-blur-[1px]"></div>
+            <div
+                class="absolute bottom-0 right-10 w-[30%] h-[100%] bg-jmj-orange/70 clip-slant z-10 mix-blend-multiply hidden md:block">
+            </div>
+
+            <div class="relative z-20 max-w-7xl mx-auto px-6">
+                <div class="max-w-3xl">
+                    <h1 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4 flex items-center gap-3 animate-fadeIn">
+                        <span class="w-10 h-0.5 bg-jmj-orange"></span>
+                        Socio de Alto Rendimiento
+                    </h1>
+                    <p class="font-stix italic text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6 animate-fadeInUp">
+                        Liderazgo técnico para decisiones críticas.
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed font-light animate-fadeInUp delay-200">
+                        Una consultoría de ingenieros para ingenieros. Maximizamos el valor de su proyecto u operación,
+                        incrementando sus posibilidades de éxito con un enfoque colaborativo y rigor predictivo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24 -mt-16 relative z-30">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Nuestro Equipo</h2>
+                <p class="font-stix text-4xl text-jmj-blue leading-tight mb-6">
+                    Consultores con vasta trayectoria. "Saben Hacer" y "Pueden Hacer".
+                </p>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Asignamos a sus proyectos profesionales certificados con maestría y más de 20 años de experiencia
+                    operando en la gran minería para compañías como Codelco, BHP, Anglo American y Collahuasi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {team.map((member) => (
+                    <article class="group bg-white p-8 rounded-xl shadow-premium border border-slate-100 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-jmj-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                        <h3 class="text-2xl font-stix font-bold text-jmj-blue mb-1">{member.name}</h3>
+                        <p class="text-jmj-orange text-xs font-bold uppercase tracking-widest mb-4">{member.role}</p>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">{member.desc}</p>
+                        {member.clients.length > 0 && (
+                            <div class="flex flex-wrap gap-2">
+                                {member.clients.map((client) => (
+                                    <span class="bg-slate-50 text-slate-500 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider border border-slate-100">{client}</span>
+                                ))}
+                            </div>
+                        )}
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <!-- Cobertura Section -->
+        <section class="bg-white py-24 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-jmj-orange text-sm font-extrabold tracking-[0.25em] uppercase mb-4">Cobertura Regional</h2>
+                    <p class="font-stix text-4xl md:text-5xl text-jmj-blue leading-tight mb-6">
+                        Operamos en los polos mineros más exigentes de Sudamérica.
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        Nuestra capacidad de despliegue nos permite asistir a la gran minería e industria en ubicaciones
+                        estratégicas, aportando conocimiento técnico adaptado a las normativas de cada país.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        {coverage.map((item) => (
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-xl font-stix text-jmj-blue">
+                                    {item.code}
+                                </div>
+                                <div>
+                                    <p class="font-bold text-jmj-blue">{item.country}</p>
+                                    <p class="text-xs text-slate-500 uppercase tracking-widest">{item.locations}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div class="relative h-[500px] w-full bg-slate-50 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center">
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-jmj-blue/5 to-transparent"></div>
+                    <div class="w-64 h-64 border-[10px] border-jmj-orange/20 rounded-full flex items-center justify-center animate-pulse">
+                        <div class="w-48 h-48 border-[10px] border-jmj-blue/10 rounded-full"></div>
+                    </div>
+                    <p class="absolute font-stix text-jmj-blue text-2xl font-bold italic opacity-30">Sudamérica</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</BaseLayout>
+
+<style>
+    .delay-200 { animation-delay: 0.2s; }
+</style>
